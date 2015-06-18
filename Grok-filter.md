@@ -45,11 +45,11 @@ Vậy để thực hiện việc này thế nào? Trước hết cũng cần ph�
 
 #Thực hiện
 
-Thực hiện cài đặt bộ sản phẩm tại [bài viết trước](https://github.com/huytm/ELK---STACK/blob/master/README.md)) của mình.
+- Thực hiện cài đặt bộ sản phẩm tại [bài viết trước](https://github.com/huytm/ELK---STACK/blob/master/README.md) của mình.
 
-Ở bài viết này mình sẽ lọc một vài bản tin log cụ thể đó là **Nginx**, **SSH**, **APACHE**
+- Ở bài viết này mình sẽ lọc một vài bản tin log cụ thể đó là **Nginx**, **SSH**, **APACHE**
 
-#### Chuẩn bị
+### Chuẩn bị
 
 Tại **ELK server**, tạo Thư mục `patterns`
 
@@ -58,9 +58,9 @@ sudo mkdir -p /opt/logstash/patterns
 sudo chown logstash:logstash /opt/logstash/patterns
 ```
 
-#### 1. Với Nginx
+### 1. Với Nginx
 
-#####- Tại **Client**
+##### Tại **Client**
 
 `sudo vi /etc/logstash-forwarder.conf`
 
@@ -124,7 +124,7 @@ filter {
 
 ### 2. Với APACHE:
 
-#####- Tại **Client**
+##### Tại **Client**
 
 Đẩy file apache `access.log` lên server
 
@@ -152,7 +152,7 @@ filter {
 
 `sudo service logstash-forwarder restart`
 
- ####- Tại **SERVER**
+ ####- Tại **ELK-SERVER**
 
 `sudo vi /etc/logstash/conf.d/12-apache.conf`
 
@@ -175,7 +175,7 @@ filter {
 
 ###3. Với SSH:
 
- #####- Tại **Client**
+ ##### Tại **Client**
 
 `sudo vi /etc/logstash-forwarder.conf`
 
@@ -202,7 +202,7 @@ filter {
 `sudo service logstash-forwarder restart`
 
 
- #####- Tại **Server**
+ ##### Tại **Server**
 
 `sudo vi /opt/logstash/patterns/ssh`
 
