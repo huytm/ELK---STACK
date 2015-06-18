@@ -1,6 +1,6 @@
 # Đôi điều về Grok-filter
 
-Ở bài viết[trước](https://github.com/huytm/ELK---STACK/blob/master/README.md) mình đã thực hiện cài đặt và cấu hình *Logstash*, *Elastichsearch*, *Kibana* hoạt động để thực hiện thu thập log. Vậy bản tin log khi được hệ thống nhận được sẽ có nhiều định dạng khác nhau? Người dùng liệu có thể định dạng lại bản tin này cho phù hợp để phục vụ việc phân tích log sau này không? Câu trả lời là được.
+Ở bài viết [trước](https://github.com/huytm/ELK---STACK/blob/master/README.md) mình đã thực hiện cài đặt và cấu hình *Logstash*, *Elastichsearch*, *Kibana* hoạt động để thực hiện thu thập log. Vậy bản tin log khi được hệ thống nhận được sẽ có nhiều định dạng khác nhau? Người dùng liệu có thể định dạng lại bản tin này cho phù hợp để phục vụ việc phân tích log sau này không? Câu trả lời là được.
 
 Trở lại với **Phương pháp xử lý** log của Logstash **`INPUT => FILTER => OUTPUT`** . Thật may là logstash cung cấp cho người dùng một cơ chế lọc cực mạnh được gọi là **Grok**. Grok hoạt động bằng cách phân tích các bản tin thành các trường riêng biệt và gán cho chúng một định danh. Ví dụ bạn nhận được bản tin là `Openstack is my life`, và bạn muốn chia bản tin này thành nhiều trường `f1 f2 f3 f4` tương ứng thì bạn phải sử dụng **Grok filter** của Logstash.
 
@@ -17,9 +17,10 @@ Failed %{WORD:auth_method} for %{USER:username} from %{IP:src_ip} port %{INT:src
 
 ```
 
-*Mẹo* Sử dụng trang này để kiểm tra `http://grokdebug.herokuapp.com/`
+*Mẹo* Mình thường sử dụng trang này để kiểm tra (`http://grokdebug.herokuapp.com/`)
 
 Kết quả:
+
 Bản tin nhận được lúc đầu:
 
 <img src="http://i.imgur.com/goVH1Am.png">
@@ -44,7 +45,7 @@ Thứ 3: Các mẫu bộ lọc cho từng bản tin được lưu trữ ở đâ
 
 #Thực hiện
 
-Thực hiện cài đặt bộ sản phẩm tại [bài viết trước]](https://github.com/huytm/ELK---STACK/blob/master/README.md)) của mình.
+Thực hiện cài đặt bộ sản phẩm tại [bài viết trước](https://github.com/huytm/ELK---STACK/blob/master/README.md)) của mình.
 
 Ở bài viết này mình sẽ lọc một vài bản tin log cụ thể đó là **Nginx**, **SSH**, **APACHE**
 
