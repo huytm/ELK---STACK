@@ -33,13 +33,13 @@ Như đã thấy trên hình, mình đã tách được IP truy cập đến th�
 
 Vậy để thực hiện việc này thế nào? Trước hết cũng cần phải hiểu cách thức làm việc của chúng 1 chút
 
-Thứ 1: Mỗi bản tin log từ Client sử dụng logstash-forwarder người dùng có "gắn" cho nó một **type** riêng biệt.
+**Thứ 1**: Mỗi bản tin log từ Client sử dụng logstash-forwarder người dùng có "gắn" cho nó một **type** riêng biệt.
 
 <img src="http://i.imgur.com/FuIOiU1.png">
 
-Thứ 2: Bản tin log mà logstash nhận được từ logstash-forwarder sẽ được Filter, Grok-filter sẽ sử dụng chính các type ở trên để thực hiện lọc bản tin.
+**Thứ 2**: Bản tin log mà logstash nhận được từ logstash-forwarder sẽ được Filter, Grok-filter sẽ sử dụng chính các type ở trên để thực hiện lọc bản tin.
 
-Thứ 3: Các mẫu bộ lọc cho từng bản tin được lưu trữ ở đâu? Logstash cung cấp cho người dùng một folder chứa các bộ lọc gọi là `patterns`, người dùng có thể thêm các bộ lọc cho từng bản tin đặc biệt hoặc sử dụng bộ lọc có sẵn (Ví dụ như Apache2 là có sẵn).
+**Thứ 3**: Các mẫu bộ lọc cho từng bản tin được lưu trữ ở đâu? Logstash cung cấp cho người dùng một folder chứa các bộ lọc gọi là `patterns`, người dùng có thể thêm các bộ lọc cho từng bản tin đặc biệt hoặc sử dụng bộ lọc có sẵn (Ví dụ như Apache2 là có sẵn).
 
 ---
 
