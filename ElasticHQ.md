@@ -16,4 +16,8 @@ sudo elasticsearch/bin/plugin -install royrusso/elasticsearch-HQ
 
 - Truy cập vào địa chỉ `ip_node_master:9200/_plugin/HQ/`
 
+<img src="http://i.imgur.com/fmJAQoF.png">
+
+
 - Ngoài ElasticHQ, còn có plugin khác như Marvel, head...
+
