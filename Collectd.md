@@ -174,7 +174,7 @@ plugin: "interface" AND plugin_instance: "br2" AND host: "u-del720"	  (Đối v�
 - Plugin sử dụng: Disk
 - Các câu truy vấn:
 
-```sh
+`plugin: "disk" AND collectd_type: "disk_ops" AND host: "u-del720"`
 
 <img src="http://i.imgur.com/EgRFFh5.png">
 
