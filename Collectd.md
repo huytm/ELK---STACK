@@ -1,8 +1,15 @@
+Các bạn có thể tham khảo thêm các bài viết trước của mình 
+
+- [1. Cài đặt Logstash - elasticsearchh - kibana](https://github.com/huytm/ELK---STACK/blob/master/Cai%20dat%20Logstash%20-%20elasticsear%20-%20kibana.md)
+- [2. Cơ chế lọc grok-filer](https://github.com/huytm/ELK---STACK/blob/master/Grok-filter.md)
+- [3. GEO-IP](https://github.com/huytm/ELK---STACK/blob/master/GEO-IP.md)
+- [4. Collectd](https://github.com/huytm/ELK---STACK/blob/master/Collectd.md)
+
 # Về Collectd
 
 Ngoài các bản tin log nhận được, Logstash cũng có thể kết hợp thêm với một thành phần khác để thu thập "metric" các phần cứng hệ thống là **Collectd**. Có thể hiểu như sau, ví dụ tại mỗi thời điểm thông số Ram, cpu, ổ cứng, băng thông mạng của bạn là khác nhau. Metric của các phần cứng là một cặp giá trị: time-value, các thông tin về metric sẽ được **Collectd** thu thập và ghi lại thành các bản tin đẩy lên Logstash server.
 
-https://dl.dropboxusercontent.com/u/6762565/wp/elkoverview.jpg
+<img src="https://dl.dropboxusercontent.com/u/6762565/wp/elkoverview.jpg">
 
 
 # Cài đặt 
